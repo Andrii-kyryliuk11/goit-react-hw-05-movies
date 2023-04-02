@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/438.1294f795.chunk.css","mappings":"AAAA,kBAEE,yBAA2B,CAD3B,YAAa,CAEb,iBACF","sources":["components/Details/Cast/Cast.module.css"],"sourcesContent":[".cast {\n  height: 195px;\n  border-top: 1px solid black;\n  overflow-y: scroll;\n}\n"],"names":[],"sourceRoot":""}
