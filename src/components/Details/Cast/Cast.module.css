@@ -1,0 +1,5 @@
+.cast {
+  height: 195px;
+  border-top: 1px solid black;
+  overflow-y: scroll;
+}

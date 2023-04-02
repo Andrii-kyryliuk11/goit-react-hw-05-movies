@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 6px 6px 5px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 6px 5px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 5px -4px rgba(0, 0, 0, 0.75);
+}
+
+.about {
+  width: 100%;
+
+  background-color: RGBA(151, 148, 153, 0.05);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-size: 40px;
+}
+.tag {
+  margin-top: 10px;
+  font-size: 17px;
+}
+.titleSpan {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.info,
+.genres {
+  padding: 0;
+}
+
+.info {
+  font-size: 20px;
+  font-weight: 700;
+}

@@ -1,0 +1,16 @@
+.trandList {
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.title {
+  text-align: center;
+  max-width: 300px;
+  font-size: 30px;
+  color: black;
+  margin-top: 10px;
+}
