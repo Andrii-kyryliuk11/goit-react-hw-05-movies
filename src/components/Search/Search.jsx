@@ -14,6 +14,7 @@ export default function Search() {
     if (searchQuery !== '') {
       Api(null, searchParams).then(data => setData(data.results));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const updateQueryString = e => {

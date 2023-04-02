@@ -14,6 +14,7 @@ export default function Reviews() {
         console.log(res);
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     reviews && (

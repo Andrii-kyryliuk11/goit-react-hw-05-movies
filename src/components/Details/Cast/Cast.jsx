@@ -14,6 +14,7 @@ export default function MovieCast() {
         console.log(res);
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return cast !== null ? (
     <div className={css.cast}>
