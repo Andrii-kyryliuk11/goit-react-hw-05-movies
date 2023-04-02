@@ -11,7 +11,6 @@ export default function Details() {
     if (data === null) {
       Api(movieId).then(response => setData(response));
     }
-    console.log(data);
   }, [data, movieId]);
 
   return (
