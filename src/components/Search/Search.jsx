@@ -8,7 +8,6 @@ export default function Search() {
   const [searchParams, setSearchParams] = useSearchParams({});
   const searchQuery = searchParams.get('query') ?? '';
   const location = useLocation();
-  console.log(location);
 
   useEffect(() => {
     if (searchQuery !== '') {

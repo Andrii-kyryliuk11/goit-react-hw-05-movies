@@ -13,7 +13,6 @@ export default function Details() {
     }
     console.log(data);
   }, [data, movieId]);
-  console.log(location);
 
   return (
     data && (
