@@ -11,7 +11,6 @@ export default function MovieCast() {
     if (cast === null) {
       Api(`${movieId}/credits`).then(res => {
         setCast(res.cast);
-        console.log(res);
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

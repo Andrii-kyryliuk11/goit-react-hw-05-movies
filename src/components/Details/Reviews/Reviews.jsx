@@ -11,7 +11,6 @@ export default function Reviews() {
     if (reviews === null) {
       Api(`${movieId}/reviews`).then(res => {
         setReviews(res.results);
-        console.log(res);
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
