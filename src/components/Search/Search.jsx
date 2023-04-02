@@ -1,10 +1,5 @@
 import { useEffect, useState } from 'react';
-import {
-  useParams,
-  useSearchParams,
-  Link,
-  useLocation,
-} from 'react-router-dom';
+import { useSearchParams, Link, useLocation } from 'react-router-dom';
 import Api from 'services/Api';
 import css from './Search.module.css';
 

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Api from 'services/Api';
 import css from './Cast.module.css';
-import defaultPnd from '../../../images/1.png';
 
 export default function MovieCast() {
   const { movieId } = useParams();
