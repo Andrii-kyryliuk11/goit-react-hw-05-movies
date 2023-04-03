@@ -3,6 +3,7 @@ import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import Api from 'services/Api';
 import css from './Details.module.css';
 
+const api = new Api();
 export default function Details() {
   const [data, setData] = useState(null);
   const { movieId } = useParams();
@@ -11,7 +12,7 @@ export default function Details() {
 
   useEffect(() => {
     if (data === null) {
-      Api(movieId).then(response => setData(response));
+      api.searchMovieById(movieId).then(response => setData(response));
     }
   }, [data, movieId]);
 

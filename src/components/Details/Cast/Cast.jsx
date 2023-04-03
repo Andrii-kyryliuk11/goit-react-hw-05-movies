@@ -3,13 +3,14 @@ import { useParams } from 'react-router-dom';
 import Api from 'services/Api';
 import css from './Cast.module.css';
 
+const api = new Api();
 export default function MovieCast() {
   const { movieId } = useParams();
   const [cast, setCast] = useState(null);
 
   useEffect(() => {
     if (cast === null) {
-      Api(`${movieId}/credits`).then(res => {
+      api.searchMovieById(`${movieId}/credits`).then(res => {
         setCast(res.cast);
       });
     }

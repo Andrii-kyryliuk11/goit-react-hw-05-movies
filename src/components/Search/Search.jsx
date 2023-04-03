@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams, Link, useLocation } from 'react-router-dom';
 import Api from 'services/Api';
-import css from './Search.module.css';
 
+import css from './Search.module.css';
+const api = new Api();
 export default function Search() {
   const [data, setData] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams({});
@@ -11,7 +12,7 @@ export default function Search() {
 
   useEffect(() => {
     if (searchQuery !== '') {
-      Api(null, searchParams).then(data => setData(data.results));
+      api.searchMovieByQuery(searchParams).then(data => setData(data.results));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -29,7 +30,9 @@ export default function Search() {
         onSubmit={e => {
           e.preventDefault();
           if (searchQuery !== '') {
-            Api(null, searchParams).then(data => setData(data.results));
+            api
+              .searchMovieByQuery(searchParams)
+              .then(data => setData(data.results));
           }
         }}
       >

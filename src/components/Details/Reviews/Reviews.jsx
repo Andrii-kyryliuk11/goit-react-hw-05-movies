@@ -3,13 +3,14 @@ import { useParams } from 'react-router-dom';
 import Api from 'services/Api';
 import css from './Reviews.module.css';
 
+const api = new Api();
 export default function Reviews() {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState(null);
 
   useEffect(() => {
     if (reviews === null) {
-      Api(`${movieId}/reviews`).then(res => {
+      api.searchMovieById(`${movieId}/reviews`).then(res => {
         setReviews(res.results);
       });
     }

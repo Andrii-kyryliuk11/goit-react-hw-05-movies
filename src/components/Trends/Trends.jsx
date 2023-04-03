@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import Api from 'services/Api';
 import css from './Trends.module.css';
 
+const api = new Api();
+
 export default function Trends() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     if (data.length === 0) {
-      Api().then(data => setData(data.results));
+      api.searchTrends().then(data => setData(data.results));
     }
   }, [data]);
 
